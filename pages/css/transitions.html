@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSE2501 - Demosite-Transitions</title>
+    <!--Link to the main.css stylesheet-->
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <!-- Internal/Embedded stylesheet that will be used to illustrate CSS Transitions -->
+     <style>
+      #transition
+      {
+        width: 150px;
+        height: 150px;
+        background-color: #f00;
+        /* Specify the transition using the shorthand for the transition */
+        transition: background 2s ease-out, width 2s ease-out, height 2s ease-out;
+      }
+
+      /* Set up the transition using the hover :pseudo-selector */
+      #transition:hover
+      {
+        width: 250px;
+        height: 250px;
+        background-color: #f80;
+      }
+      .btn
+      {
+        background-color: #00a5ff;
+        color: #0a00fd;
+        transition: all 1s ease-out;
+      }
+      .btn:hover
+      {
+        background-color: #0074b2;
+        color: purple;
+      }
+     </style>
+</head>
+<body>
+    <header>
+        <!-- TODO: Add the site's navigation bar here -->
+         <a class="logo" href="../../index.html">ADSE2409</a>
+         <nav class="navbar menu">
+          <!-- Hamburger menu for devices with a screen width less than 800 px -->
+           <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" style="margin-left: auto;">
+            <span></span>
+            <span></span>
+            <span></span>
+           </button>
+          <ul id="nav-list">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../text-formatting.html">Text Formating</a></li>
+            <li><a href="../lists.html">Lists</a></li>
+            <li><a href="../links.html">Links</a></li>
+            <li><a href="../images.html">Images</a></li>
+            <li>
+              <a href="#" aria-haspopup="true" aria-expanded="false" class="has-submenu">CSS</a>
+              <ul>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transformations.html">Transformationsl</a></li>
+                <li><a href="transitions.html">Transitions</a></li>
+              </ul>
+            </li>
+            <li><a href="../pagelayout.html">Page Layout</a></li>
+            <li><a href="../forms.html">Forms</a></li>
+            <li><a href="../tables.html">Tables</a></li>
+            <li><a href="../multimedia.html">Multimedia</a></li>
+          </ul>
+         </nav>
+      </header>
+    <!--Add a video element to hold a video background-->
+    <video id="video_background"></video>
+    <div id="container">
+      <!-- Add a link to our social media handles using a div -->
+       <h1>Follow Us on Social Media</h1>
+       <div class="social-icons-mt-4">
+        <a href="https://www.youtube.com/" title="Subscribe to our youtube channel" class="icon-link" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="https://github.com/TheodoraOdoi/Hellochef" title="view our github profile" class="icon-link" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="#" class="icon-link" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/" title="Follow us on Instagram" class="icon-link" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/" title="Follow us on Facebook" class="icon-link" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="icon-link" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/feed/" title="follow us on linkedin" class="icon-link" target="_blank"><i class="bi bi-linkedin"></i></a>
+       </div>
+        <h1 class="page-heading">CSS Transitions</h1>
+        <p>A CSS transition is a way of providing a smooth change(transition) to a given Css property over a given/ set duration(time period). Kindly hover your mouse over the red square or buttons below to see how Css transitions work</p>
+        <div id="transition"></div>
+        <input type="button" class="btn" value="button1"/>&nbsp;&nbsp;
+        <input type="button" class="btn" value="button2"/>
+        <footer>
+            ADSE 2409 Copyright &copy; 2024 - <span id="currYear">
+            <script>document.getElementById('currYear').innerHTML=
+            new Date().getFullYear();
+            </script>
+            </span><br/>
+            Designed by <a href="#" target="_blank">Theo's Designs</a>
+          </footer>
+    </div>
+    <!--link to the javascript to load the video for deviceswith a screen width of 800px and above-->
+    <script type="text/javascript" src="../../js/videobackground.js"></script>
+</body>
+</html>

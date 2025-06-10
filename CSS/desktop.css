@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document that will be used for devices with a minimum screen width of 800px. */
+
+/* Add a background video */
+#video_bkgd
+{
+    visibility: visible;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10000;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+/* Style the images in our site*/
+.image-container figure {flex-basis: calc(25% - 10px);}

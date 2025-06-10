@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0"/>
+    <title>ADSE2409 Demosite - </title>
+    <!-- Link to the main.css stylesheet -->
+    <link rel="stylesheet" href="../CSS/main.css"/>
+    <!-- link to the site's JS file -->
+     <script src="../js/nav_js.js"></script>
+    <!-- Embedded style to demonstrate Css Flexbox snd Grid layouts -->
+     <style>
+      /* ------------------------------------------- */
+      /* Code to style the flexbox and grid layout */
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+      .flex-items
+      {
+        margin: 5px;
+      }
+
+      /* Common rules for the flex and grid items */
+      .flex-items, .grid-items
+      {
+        background-color: #444;
+        text-align: center;
+        padding: 10px;
+      }
+
+      /* Code for the grid layout */
+      .grid-container
+      {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 10px;
+        padding: 20px;
+      }
+
+      /* Mobile device styles max-width:480px. */
+      @media only screen and (max-width:480px)
+      {
+        .flex-items
+        {
+          flex: 1 0 100%;
+        }
+        .grid-container{grid-template-columns: repeat(1, 1fr);}
+      }
+      /* Tablet device styles min-width:481px. */
+      @media only screen and (min-width:481px)
+      {
+        .flex-items
+        {
+          flex: 1 0 33.33%;
+          border-radius: 7px;
+        }
+        .grid-container{grid-template-columns: repeat(2, 1fr);}
+      }
+      /* Desktop device styles min-width: 800px. */
+      @media only screen and (min-width: 800px)
+      {
+        .flex-container{justify-content: space-between;}
+
+        .flex-items
+        {
+          flex: 1 0 25%;
+        }
+        .grid-container
+        {
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: minmax(100px, auto);
+        }
+        .grid-items:nth-child(1) {grid-row-start: span 3;} /*span 3 rows*/
+
+        .grid-items:nth-child(5) {grid-row-start: span 2;} /*span 3 rows*/
+
+        .grid-items:nth-child(6) {grid-row-start: span 2 / -1; /* start from the 2nd column and span across all remaining columns*/}
+      }
+     </style>
+  </head>
+  <body>
+    <header>
+      <!-- TODO: Add the site's navigation bar here -->
+       <a class="logo" href="../index.html">ADSE2409</a>
+       <nav class="navbar menu">
+        <!-- Hamburger menu for devices with a screen width less than 800 px -->
+         <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" style="margin-left: auto;">
+          <span></span>
+          <span></span>
+          <span></span>
+         </button>
+        <ul id="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="text-formatting.html">Text Formating</a></li>
+          <li><a href="lists.html">Lists</a></li>
+          <li><a href="links.html">Links</a></li>
+          <li><a href="images.html">Images</a></li>
+          <li>
+            <a href="#" aria-haspopup="true" aria-expanded="false" class="has-submenu">CSS</a>
+            <ul>
+              <li><a href="css/animations.html">Animations</a></li>
+              <li><a href="css/transformations.html">Transformations</a></li>
+              <li><a href="css/transitions.html">Transitions</a></li>
+            </ul>
+          </li>
+          <li><a href="pagelayout.html">Page Layout</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li>
+            <a href="#" aria-haspopup="true" aria-expanded="false" class="has-submenu">JS</a>
+            <ul>
+              <li><a href="js-intro.html">JS Intro</a></li>
+              <li><a href="js-selection.html">JS Selection</a></li>
+              <li><a href="js-calculator.html">JS Calculator</a></li>
+              <li><a href="js-arrays.html">JS Arrays</a></li>
+            </ul>
+          </li>
+        </ul>
+       </nav>
+    </header>
+    <!-- Add a video element to hold our background video -->
+    <video id="video_bkgd"></video>
+    <div id="container">
+      <!-- Add a link to our social media handles using a div -->
+       <h1>Follow Us on Social Media</h1>
+       <div class="social-icons-mt-4">
+        <a href="https://www.youtube.com/" title="Subscribe to our youtube channel" class="icon-link" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="https://github.com/TheodoraOdoi/Hellochef" title="view our github profile" class="icon-link" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="#" class="icon-link" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/" title="Follow us on Instagram" class="icon-link" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/" title="Follow us on Facebook" class="icon-link" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="icon-link" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/feed/" title="follow us on linkeedin" class="icon-link" target="_blank"><i class="bi bi-linkedin"></i></a>
+       </div>
+      <h1 class="page-heading">CSS Flexbox and Grid Layout</h1>
+      <p>The flexible box layout (usually referred to as flexbox) is a one-dimentional layout model for distributing space between items and includes numerous alignment capabilities. An example of a flexbox is given below.</p>
+      <h2 class="section-heading">Flexbox Layout</h2>
+      <div class="flex-container">
+        <div class="flex-items">items 1</div>
+        <div class="flex-items">items 2</div>
+        <div class="flex-items">items 3</div>
+        <div class="flex-items">items 4</div>
+        <div class="flex-items">items 5</div>
+      </div>
+      <h2 class="section-heading">Grid Layout</h2>
+      <p>A grid is a set of intersecting horizontal and vertical lines defining rows and columns, that introduces a two dimentional gris system to CSS. Elements can be placed with these row and column lines. An example of a CSS Grid is given below.</p>
+      <div class="grid-container">
+        <div class="grid-items">Item 1</div>
+        <div class="grid-items">Item 2</div>
+        <div class="grid-items">Item 3</div>
+        <div class="grid-items">Item 4</div>
+        <div class="grid-items">Item 5</div>
+        <div class="grid-items">Item 6</div>
+        <div class="grid-items">Item 7</div>
+      </div>
+        <footer>
+          ADSE 2409 Copyright &copy; 2024 - <span id="currYear">
+          <script>document.getElementById('currYear').innerHTML=
+          new Date().getFullYear();
+          </script>
+          </span><br/>
+          Designed by <a href="#" target="_blank">Theo's Designs</a>
+        </footer>
+    </div>
+    <!-- Link to the JavaScript to load the video for divices with a screen width 
+   of 800mand above -->
+   <script src="../js/video_background.js"></script>
+  </body>
+</html>

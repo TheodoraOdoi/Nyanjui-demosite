@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0"/>
+    <title>ADSE2409 Demosite - JavaScript Calculator</title>
+    <!-- Link to the main.css stylesheet -->
+    <link rel="stylesheet" href="../CSS/main.css"/>
+    <!-- link to the site's JS file -->
+     <script src="../js/nav_js.js"></script>
+    <!-- Link to the calculator JavaScript file -->
+    <script src="../js/js_calculator.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- TODO: Add the site's navigation bar here -->
+       <a class="logo" href="../index.html">ADSE2409</a>
+       <nav class="navbar menu">
+        <!-- Hamburger menu for devices with a screen width less than 800 px -->
+         <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" style="margin-left: auto;">
+          <span></span>
+          <span></span>
+          <span></span>
+         </button>
+        <ul id="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="text-formatting.html">Text Formating</a></li>
+          <li><a href="lists.html">Lists</a></li>
+          <li><a href="links.html">Links</a></li>
+          <li><a href="images.html">Images</a></li>
+          <li>
+            <a href="#" aria-haspopup="true" aria-expanded="false" class="has-submenu">CSS</a>
+            <ul>
+              <li><a href="css/animations.html">Animations</a></li>
+              <li><a href="css/transformations.html">Transformations</a></li>
+              <li><a href="css/transitions.html">Transitions</a></li>
+            </ul>
+          </li>
+          <li><a href="pagelayout.html">Page Layout</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li>
+            <a href="#" aria-haspopup="true" aria-expanded="false" class="has-submenu">JS</a>
+            <ul>
+              <li><a href="js-intro.html">JS Intro</a></li>
+              <li><a href="js-selection.html">JS Selection</a></li>
+              <li><a href="js-calculator.html">JS Calculator</a></li>
+              <li><a href="js-arrays.html">JS Arrays</a></li>
+            </ul>
+          </li>
+        </ul>
+       </nav>
+    </header>
+    <!-- Add a video element to hold our background video -->
+    <video id="video_bkgd"></video>
+    <div id="container">
+      <!-- Add a link to our social media handles using a div -->
+       <h1>Follow Us on Social Media</h1>
+       <div class="social-icons-mt-4">
+        <a href="https://www.youtube.com/" title="Subscribe to our youtube channel" class="icon-link" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="https://github.com/" title="view our github profile" class="icon-link" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://x.com/home" class="icon-link" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/" title="Follow us on Instagram" class="icon-link" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/" title="Follow us on Facebook" class="icon-link" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.behance.net/" class="icon-link" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/feed/" title="follow us on linkeedin" class="icon-link" target="_blank"><i class="bi bi-linkedin"></i></a>
+       </div>
+      <h1 class="page-heading">Simple JavaScript Calculator</h1>
+      <p>This page demonstrates the various JavaScript operators and switch...case construct to create a simple calculator</p>
+      <!-- Form to capture values from the user -->
+      <form method="post" id="frmCalculator" accept-charset="utf-8">
+        <fieldset>
+            <legend>Simple calculator</legend>
+            <p>
+                <label for="txtFirstNum">First Number <span class="required-field">*</span>:</label><br/>
+                <input type="text" id="txtFirstNum" type="number" name="txtFirstNum" autofocus required form="frmCalculator" tabindex="10" title="Please enter the first number"/>
+            </p>
+            <p>
+                <label for="txtSecondNum">Second Number <span class="required-field">*</span>:</label><br/>
+                <input type="text" id="txtSecondNum" type="number" name="txtSecondNum" required form="frmCalculator" tabindex="20" title="Please enter the second number"/>
+            </p>
+            <p>
+                <label for="stlOperation">Select an arithmatic operation <span class="required-field">*</span>:</label><br/>
+                <select id="sltOperation" name="sltOperation" form="frmCalculator" required tabindex="30" title="please select an arithmatic operator ">
+                  <option selected>Select an operation</option>
+                  <option value="+">Add +</option>
+                  <option value="-">Subtract -</option>
+                  <option value="*">Multiply x</option>
+                  <option value="/">Divide /</option>
+                  <option value="%">Modulus/Remainder %</option>
+                  <option value="^">Power/Exponentiation x</option>
+                </select>
+            </p>
+            <p>
+                <label for="txtAnswer">Answer:</label><br/>
+                <input type="text" id="txtAnswer" name="txtAnswer" disabled form="frmCalculator"
+                style="color:#fff;"/>
+            </p> 
+            <p>
+                <input type="button" id="btnCalculate" name="btnCalculate" tabindex="40" value="Calculate" onclick="calculate()"/>
+            </p> 
+        </fieldset>
+      </form>
+        <footer class="page-footer">
+          ADSE 2409 Copyright &copy; 2024 - <span id="currYear">
+          <script>document.getElementById('currYear').innerHTML=
+          new Date().getFullYear();
+          </script>
+          </span><br/>
+          Designed by <a href="#" target="_blank">Theo's Designs</a>
+        </footer>
+    </div>
+    <!-- Link to the JavaScript to load the video for divices with a screen width 
+   of 800mand above -->
+   <script src="../js/video_background.js"></script>
+  </body>
+</html>

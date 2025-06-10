@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document that will be used for devices with a maximum screen width of 480px. */
+
+body {background-color:#c1f2cf;} 
+
+   /* style the container div using an id selector */
+    #container{width: 90%;}
+
+/* Hide video background. */
+#video_bkgd{display: none;}
+
+/* Style the images in our site */
+.image-container 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the form's input controls e.g. textfields, password fields, tel, email & so on */
+form textarea, input[type="text"], input[type="password"], input[type="tel"], 
+input[type="email"], input[type="number"], input[type="date"], form select, form label
+{
+    width: 98%;
+    margin-left: 1%;
+}
+
+input[type="radio"], form p {margin-left: 1%;}

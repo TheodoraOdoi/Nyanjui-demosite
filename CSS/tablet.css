@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document that will be used for devices with a minimum screen width of 481px. */
+
+body
+{
+    background-color:#c1f2cf;
+    background-image: url('../images/bkgd\ 3.jpg');
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Style the container div using an id selector  */
+#container
+{
+    width: 90%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+}
+
+/* Hide the video background */
+#video_bkgd{display: none;}
+
+/* Style the images in our site */
+.image-container
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.image-container figure {flex-basis: calc(50% - 20px);}
+
+/* Style the form's input controls e.g. textfields, password fields, tel, email & so on */
+form textarea, input[type="text"], input[type="password"], input[type="tel"], 
+input[type="email"], input[type="number"], input[type="date"], form select, form label
+{
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="radio"], form p {margin-left: 1%;}

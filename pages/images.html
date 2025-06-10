@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0"/>
+    <title>ADSE2409 Demosit - HTML Images </title>
+    <!-- Link to the main.css stylesheet -->
+    <link rel="stylesheet" href="../CSS/main.css">
+    <!-- link to the site's JS file -->
+     <script src="../js/nav_js.js"></script>
+  </head>
+  <body>
+    <header>
+        <!-- TODO: Add the site's navigation bar here -->
+         <a class="logo" href="../index.html">ADSE2409</a>
+         <nav class="navbar menu">
+          <!-- Hamburger menu for devices with a screen width less than 800 px -->
+           <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" style="margin-left: auto;">
+            <span></span>
+            <span></span>
+            <span></span>
+           </button>
+          <ul id="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="text-formatting.html">Text Formating</a></li>
+            <li><a href="lists.html">Lists</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li>
+              <a href="#" aria-haspopup="true" aria-expanded="false" class="has-submenu">CSS</a>
+              <ul>
+                <li><a href="css/animations.html">Animations</a></li>
+                <li><a href="css/transformations.html">Transformationsl</a></li>
+                <li><a href="css/transitions.html">Transitions</a></li>
+              </ul>
+            </li>
+            <li><a href="pagelayout.html">Page Layout</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li>
+            <a href="#" aria-haspopup="true" aria-expanded="false" class="has-submenu">JS</a>
+            <ul>
+              <li><a href="js-intro.html">JS Intro</a></li>
+              <li><a href="js-selection.html">JS Selection</a></li>
+              <li><a href="js-calculator.html">JS Calculator</a></li>
+              <li><a href="js-arrays.html">JS Arrays</a></li>
+            </ul>
+          </li>
+          </ul>
+         </nav>
+      </header>
+    <!-- Add a video element to hold our background video -->
+    <video id="video_bkgd"></video>
+    <div id="container">
+        <!-- Add a link to our social media handles using a div -->
+       <h1>Follow Us on Social Media</h1>
+       <div class="social-icons-mt-4">
+        <a href="https://www.youtube.com/" title="Subscribe to our youtube channel" class="icon-link" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="https://github.com/TheodoraOdoi/Hellochef" title="view our github profile" class="icon-link" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="#" class="icon-link" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/" title="Follow us on Instagram" class="icon-link" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/" title="Follow us on Facebook" class="icon-link" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="icon-link" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/feed/" title="follow us on linkeedin" class="icon-link" target="_blank"><i class="bi bi-linkedin"></i></a>
+       </div>
+      <h1 class="page-heading">HTML Images</h1>
+      <p>An image is a graphic or picture. Images are what give life to your webpage.
+        Below are some images of a fictitious desert parlour</p>
+      <!-- Cakes -->
+      <h3 class="section-heading">Cakes</h3>
+      <div class="image-container">
+        <figure>
+            <img src="../images/cakes/choc_honeycomb_cake.jpg" alt="Chocolate Honeycomb Cake" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Chocolate Honeycomb Cake</p><p class="price">2000</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/cakes/chocolate-raspberry-mousse-cake.jpg" alt="Chocolate Raspberry Mousse Cake" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Chocolate Raspberry Mousse Cake</p><p class="price">1500</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/cakes/mint_party_cake.jpg" alt="Mint Party Cake" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Mint Party Cake</p><p class="price">4500</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/cakes/vanilla_with_strawberry_cake.jpg" alt="Vanilla with Strawberry Cake" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Vanilla with Strawberry Cake</p><p class="price">3500</p>
+            </figcaption>
+        </figure>
+      </div>
+      <!-- Fruit salads -->
+      <h3 class="section-heading">Fruit salads</h3>
+      <div class="image-container">
+        <figure>
+            <img src="../images/fruit_salads/Green-Fruit-Salad.jpg" alt="Green Fruit Salad" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Green Fruit Salad</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/fruit_salads/kiwi_strawberry_vanilla_salad.jpg" alt="Kiwi Strawberry Vanilla Salad" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Kiwi Strawberry Vanilla Salad</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/fruit_salads/red-Fruit-Salad.jpg" alt="Red Fruit Salad" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Red Fruit Salad</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/fruit_salads/spinach-fruit-salad.jpg" alt="Spinach Fruit Salad" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Spinach Fruit Salad</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/fruit_salads/summer_party_fruit_salad.jpg" alt="Summer Party Fruit Salad" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Summer Party Fruit Salad</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+      </div>
+      <!-- ICECREAM -->
+      <h3 class="section-heading">Icecreams</h3>
+      <div class="image-container">
+        <figure>
+            <img src="../images/icecreams/blueberry_icecream.jpg" alt="Blueberry Icecream" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Blueberry Icecream</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/icecreams/knickerbocker_icecream.jpg" alt="Knickerbocker Icecream" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Knickerbocker Icecream</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/icecreams/sprinkles_icecream.jpg" alt="Sprinkles Icecream" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Sprinkles Icecream</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/icecreams/vanilla&chocolate_icecream.jpg" alt="Vanilla &amp Chocolate Icecream" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Vanilla &amp Chocolate Icecream</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+      </div>
+      <!-- Veggie Salads -->
+      <h3 class="section-heading">Veggie Salads</h3>
+      <div class="image-container">
+        <figure>
+            <img src="../images/veggie_salads/corn&radish_veggie_salad.jpg" alt="Corn &amp Radish Veggie Salad" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Corn &amp Radish Veggie Salad</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/veggie_salads/marinated_veggie_salad.jpg" alt="Marinated Veggie Salad" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Marinated Veggie Salad</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/veggie_salads/rainbow_veggie_salad.jpg" alt="Rainbow Veggie Salad" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Rainbow Veggie Salad</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/veggie_salads/roasted_veggie_salad.jpg" alt="Roasted Veggie Salad" loading="lazy"/>
+            <figcaption>
+                <p> Description of the Roasted Veggie Salad</p><p class="price">150</p>
+            </figcaption>
+        </figure>
+      </div>
+        <footer class="page-footer">
+          ADSE 2409 Copyright &copy; 2024 - <span id="currYear">
+          <script>document.getElementById('currYear').innerHTML=
+          new Date().getFullYear();
+          </script>
+          </span><br/>
+          Designed by <a href="#" target="_blank">Theo's Designs</a>
+        </footer>
+    </div>
+    <!-- Link to the JavaScript to load the video for divices with a screen width 
+   of 800 px and above -->
+   <script src="../js/video_background.js"></script>
+  </body>
+</html>

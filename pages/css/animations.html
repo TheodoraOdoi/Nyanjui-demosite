@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSE2501 - Demosite-Animations</title>
+    <!--Link to the main.css stylesheet-->
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <!-- Internal/Embedded stylesheet that will be used to illustrate CSS Animation -->
+     <style>
+      #css-animation-div 
+      {
+        width: 150px;
+        height: 80px;
+        background-color: #00c89f;
+        position: relative;
+        font-weight: 700;
+        padding: 15px;
+        font-size: 20px;
+      /* Create the animation using the shorthand for the animation */
+      animation: anim_div 5s 2;
+     }
+     /* Set up the animations keyframes. */
+     @keyframes anim_div{
+      0%
+      {
+        transform: rotate(0deg);
+        left: 0px;
+      }
+      25%
+      {
+        transform: rotate(20deg);
+        left: 10px;
+      }
+      50%
+      {
+        transform: rotate(0deg);
+        left: 500px;
+      }
+      75%
+      {
+        transform: rotate(0deg);
+        left: 0px;
+        background-color: #1ec7e6;
+      }
+      100%
+      {
+        transform: rotate(360deg);
+        left: 0px;
+      }
+     }
+     </style>
+</head>
+<body>
+    <header>
+        <!-- TODO: Add the site's navigation bar here -->
+         <a class="logo" href="../../index.html">ADSE2409</a>
+         <nav class="navbar menu">
+          <!-- Hamburger menu for devices with a screen width less than 800 px -->
+           <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" style="margin-left: auto;">
+            <span></span>
+            <span></span>
+            <span></span>
+           </button>
+          <ul id="nav-list">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../text-formatting.html">Text Formating</a></li>
+            <li><a href="../lists.html">Lists</a></li>
+            <li><a href="../links.html">Links</a></li>
+            <li><a href="../images.html">Images</a></li>
+            <li>
+              <a href="#" aria-haspopup="true" aria-expanded="false" class="has-submenu">CSS</a>
+              <ul>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transformations.html">Transformationsl</a></li>
+                <li><a href="transitions.html">Transitions</a></li>
+              </ul>
+            </li>
+            <li><a href="../pagelayout.html">Page Layout</a></li>
+            <li><a href="../forms.html">Forms</a></li>
+            <li><a href="../tables.html">Tables</a></li>
+            <li><a href="../multimedia.html">Multimedia</a></li>
+          </ul>
+         </nav>
+      </header>
+    <!--Add a video element to hold a video background-->
+    <video id="video_background"></video>
+    <div id="container">
+      <!-- Add a link to our social media handles using a div -->
+       <h1>Follow Us on Social Media</h1>
+       <div class="social-icons-mt-4">
+        <a href="https://www.youtube.com/" title="Subscribe to our youtube channel" class="icon-link" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="https://github.com/TheodoraOdoi/Hellochef" title="view our github profile" class="icon-link" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="#" class="icon-link" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/" title="Follow us on Instagram" class="icon-link" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/" title="Follow us on Facebook" class="icon-link" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="icon-link" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/feed/" title="follow us on linkeedin" class="icon-link" target="_blank"><i class="bi bi-linkedin"></i></a>
+       </div>
+        <h1 class="page-heading">Animations</h1>
+        <p>CSS animation is the process of changing an element&rsaquo;s property/properties over a given time duration without the need for javascript. Yu can change an element&rsaquo;s size, colour, locationon the screen and even rotate it to name a few. To create a css animation, you need to set the properties to be animated and keyframe which define how the animated element will display at a given time.</p>
+        <div id="css-animation-div">Css Animation</div>
+        <footer>
+            ADSE 2409 Copyright &copy; 2024 - <span id="currYear">
+            <script>document.getElementById('currYear').innerHTML=
+            new Date().getFullYear();
+            </script>
+            </span><br/>
+            Designed by <a href="#" target="_blank">Theo's Designs</a>
+          </footer>
+    </div>
+    <!--link to the javascript to load the video for deviceswith a screen width of 800px and above-->
+    <script type="text/javascript" src="../../js/videobackground.js"></script>
+</body>
+</html>
