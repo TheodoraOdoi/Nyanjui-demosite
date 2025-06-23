@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" contents="width=device-width, initial-scale=1.0"/>
-    <title>ADSE2409 Demosite - JS </title>
+    <title>ADSE2409 Demosite - JS Local Storage Form </title>
     <!-- Link to the main.css stylesheet -->
     <link rel="stylesheet" href="../CSS/main.css"/>
     <!-- link to the site's JS file -->
@@ -68,7 +68,7 @@
        </div>
       <h1 class="page-heading">User Details Local Storage</h1>
       <p>Please enter your details in the form below</p>
-      <form method="post" name="frmUserDetails" id="frmUserDetails" title="please enter your details" accept-charset="utf-8" action="js-localstorage.html">
+      <form method="post" name="frmUserDetails" id="frmUserDetails" title="please enter your details" accept-charset="utf-8" >
         <fieldset>
             <legend>User Details</legend>
             <p>
@@ -77,11 +77,11 @@
             </p>
             <p>
                 <label for="txtEmail">Email <span class="required">*</span>:</label><br/>
-                <input type="text" name="txtEmail" id="txtEmail" autofocus form="frmUserDetails" required tabindex="20" title="please enter your email" placeholder="jane@email.co.ke"/>
+                <input type="email" name="txtEmail" id="txtEmail" autofocus form="frmUserDetails" required tabindex="20" title="please enter your email" placeholder="jane@email.co.ke"/>
             </p>
             <p>
                 <input type="submit" name="btnSubmit" id="btnSubmit" tabindex="30" form="frmUserDetails" value="submit" title="submit your details" onclick="storeDetails(event)"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="Reset" name="btnReset" id="btnReset" tabindex="40" form="frmUserDetails" value="Reset" title="clear your details" onclick="deleteDetails(event)"/>
+                <input type="Reset" name="btnReset" id="btnReset" tabindex="40" form="frmUserDetails" value="Reset" title="clear your details" onclick="deleteDetails()"/>
             </p>
             <small style="font-size: .55em;">Fields marked with <span class="required-field">*</span></small>
         </fieldset>

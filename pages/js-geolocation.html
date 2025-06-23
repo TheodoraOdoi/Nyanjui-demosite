@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" contents="width=device-width, initial-scale=1.0"/>
-    <title>ADSE2409 Demosite - JS Local Storage </title>
+    <title>ADSE2409 Demosite - JS Geolocation </title>
     <!-- Link to the main.css stylesheet -->
     <link rel="stylesheet" href="../CSS/main.css"/>
     <!-- link to the site's JS file -->
      <script src="../js/nav_js.js"></script>
-     <!-- link to the local storage JS file -->
-      <script  src="../js/js_localstorage.js"></script>
+     <!-- link to the geolocation JS file -->
+      <script  src="../js/js_geolocation.js"></script>
   </head>
   <body>
     <header>
@@ -66,9 +66,10 @@
         <a href="https://www.behance.net/" class="icon-link" target="_blank"><i class="bi bi-behance"></i></a>
         <a href="https://www.linkedin.com/feed/" title="follow us on linkeedin" class="icon-link" target="_blank"><i class="bi bi-linkedin"></i></a>
        </div>
-      <h1 class="page-heading">Retrieve Local Storage Values&nbsp;</h1>
-      <p>Below are the local storage details</p>
-      <div id="contentDiv"></div>
+      <h1 class="page-heading">JS Geolocation API&nbsp;</h1>
+      <p>This page illustrates how to retrieve the user's location using the JS geolocation API.</p>
+
+      <input type="button" value="Display Location" onclick="getLocation()"/>
         <footer class="page-footer">
           ADSE 2409 Copyright &copy; 2024 - <span id="currYear">
           <script>document.getElementById('currYear').innerHTML=

@@ -2,14 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" contents="width=device-width, initial-scale=1.0"/>
-    <title>ADSE2409 Demosite - JS Local Storage </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ADSE2409 Demosite - Navigation </title>
     <!-- Link to the main.css stylesheet -->
     <link rel="stylesheet" href="../CSS/main.css"/>
     <!-- link to the site's JS file -->
      <script src="../js/nav_js.js"></script>
-     <!-- link to the local storage JS file -->
-      <script  src="../js/js_localstorage.js"></script>
   </head>
   <body>
     <header>
@@ -66,9 +64,88 @@
         <a href="https://www.behance.net/" class="icon-link" target="_blank"><i class="bi bi-behance"></i></a>
         <a href="https://www.linkedin.com/feed/" title="follow us on linkeedin" class="icon-link" target="_blank"><i class="bi bi-linkedin"></i></a>
        </div>
-      <h1 class="page-heading">Retrieve Local Storage Values&nbsp;</h1>
-      <p>Below are the local storage details</p>
-      <div id="contentDiv"></div>
+      <h1 class="page-heading">Navigation 1</h1>
+      <p>Page Content</p>
+      <form action="record.php" method="post">
+        <fieldset>
+            <legend>Record of Navigation</legend>
+            <ol>
+                <li id="homepage-12">Homepage 
+                    <label for="menu-id-12">Change the order for Homepage</label>
+                    <input type="text" name="homepage-12" id="menu-id-12" value="1">
+                </li>
+                <li id="contact-23">Contact Us 
+                    <label for="menu-id-23">Change the order for Contact Us</label>
+                    <input type="text" name="contact-23" id="menu-id-23" value="2">
+                </li>
+                <li id="about-16">About Us
+                    <label for="menu-id-16">Change the order for About Us</label>
+                    <input type="text" name="about-16" id="menu-id-16" value="3">
+                </li>
+                <li id="latest-14">Latest News
+                    <label for="menu-id-14">Change the order for Latest News</label>
+                    <input type="text" name="latest-14" id="menu-id-14" value="4">
+                </li>
+            </ol>
+        </fieldset>
+        <p><input type="submit" value="record new order"></p>
+      </form>
+
+      <!-- CSS file for nav-1 -->
+    
+       <style type="text/css">
+        form{
+            width: 50%;
+            margin: 0 auto;
+        }
+        fieldset {
+            background-color: #555555;
+            padding: 1em;
+        }
+        legend {
+            border: 1px #513939 solid;
+            background: #FAFAFA;
+        }
+        label {
+            position: absolute;
+            margin-left: -999em;
+        }
+        ol {
+            list-style: none;
+            position: relative;
+        }
+        body {font: 100% serif;}
+        ol li {
+            border: 1px #FFF solid;
+            background-color: #FAFAFA;
+            padding: 0.7em;
+        }
+        ol li:hover {border: 1px #513939 solid;}
+        input[type='text'] {
+            width: 2em;
+            text-align: center;
+            position: absolute;
+            left: 40%;
+        }
+       </style>
+
+      <!-- JavaScript file for nav-1 -->
+      <script type="text/javascript">
+        $(document).ready(function(){
+            $('input').hide();
+            $('ol').sortable({items: 'li',
+                update: function(event, ui) {
+                    var new_order = $('ol').sortable('toArray');
+                    $.each(new_order, function(i, element) {
+                        $('input[name = {element}]').attr('value', i + 1);
+                    }); $.post("record.php", {
+                        'new_order': $('form').serialize()
+                    })
+                }
+            });
+        });
+      </script>
+
         <footer class="page-footer">
           ADSE 2409 Copyright &copy; 2024 - <span id="currYear">
           <script>document.getElementById('currYear').innerHTML=

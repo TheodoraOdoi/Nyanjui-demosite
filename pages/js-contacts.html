@@ -3,13 +3,22 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" contents="width=device-width, initial-scale=1.0"/>
-    <title>ADSE2409 Demosite - JS Local Storage </title>
+    <title>ADSE2409 Demosite - Contacts </title>
     <!-- Link to the main.css stylesheet -->
     <link rel="stylesheet" href="../CSS/main.css"/>
     <!-- link to the site's JS file -->
      <script src="../js/nav_js.js"></script>
-     <!-- link to the local storage JS file -->
-      <script  src="../js/js_localstorage.js"></script>
+     <!-- link to the geolocation JS file -->
+      <script  src="../js/js_geolocation.js"></script>
+      <style>
+        #map
+        {
+            display: block;
+            border: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+      </style>
   </head>
   <body>
     <header>
@@ -66,9 +75,37 @@
         <a href="https://www.behance.net/" class="icon-link" target="_blank"><i class="bi bi-behance"></i></a>
         <a href="https://www.linkedin.com/feed/" title="follow us on linkeedin" class="icon-link" target="_blank"><i class="bi bi-linkedin"></i></a>
        </div>
-      <h1 class="page-heading">Retrieve Local Storage Values&nbsp;</h1>
-      <p>Below are the local storage details</p>
-      <div id="contentDiv"></div>
+      <h1 class="page-heading">JS Contact Us</h1>
+      <p>This page illustrates how to create a contact page.</p>
+      <p>Need assiatance? Would you like to chat? Give us a holla? Message us below</p>
+      <form method="post" name="frmContacts" id="frmContacts" accept-charset="UTF-8">
+        <fieldset>
+            <legend>Enquiry Details</legend>
+            <p>
+                <label for="txtNames">Names <span class="required-field">*</span>:</label><br/>
+                <input name="txtNames" type="text" autofocus="autofocus" required="required" id="txtNames" form="frmContacts" placeholder="Your Name" tabindex="10" title="Please enter your names"/>
+            </p>
+            <p>
+                <label for="txtEmail">Email <span class="required-field">*</span>:</label><br/>
+                <input name="txtEmail" type="email" required="required" id="txtEmail" form="frmContacts" placeholder="you@email.com" tabindex="20" title="Please enter your email address"/>
+            </p>
+            <p>
+                <label for="txtMessage">Message/Enquiry <span class="required-field">*</span>:</label><br/>
+                <textarea name="txtMessage" required="required" id="txtMessage" form="frmContacts" placeholder="Your message/enquiry here" tabindex="30" title="Kindly enter your message or enquiry"></textarea>
+            </p>
+            <p>
+                <input type="submit" name="btnSubmit" id="btnSubmit" tabindex="40" form="frmContacts" value="Send Message"/>
+            </p>
+        </fieldset>
+      </form>
+      <h3 class="section-heading">Reach out to us on:</h3>
+      <ul>
+        <li>Email Us: <a href="mailto:theodoranaana125@gmail.com?subject=Enquiry">theodoranaana125@gmail.com</a></li>
+        <li>Give us a buzz on <a href="tel:+254 *743307270">+254 *743307270</a></li>
+      </ul>
+      <h3>Visit us at the location below</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.834489492286!2d36.809210272291594!3d-1.2724191987154665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1bac136cf441%3A0x1891bf6528de50a9!2sEdulink%20International%20College!5e0!3m2!1sen!2ske!4v1749713293990!5m2!1sen!2ske" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+
         <footer class="page-footer">
           ADSE 2409 Copyright &copy; 2024 - <span id="currYear">
           <script>document.getElementById('currYear').innerHTML=

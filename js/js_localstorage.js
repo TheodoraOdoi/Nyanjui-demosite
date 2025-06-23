@@ -1,5 +1,8 @@
 /* JavaScript file to get and display local storage values  */
 
+// variables to store local storage details
+let localStorageDetails = "";
+
 function storeDetails(event)
 {
     event.preventDefault(); // Prevent form from submitting
@@ -10,10 +13,10 @@ function storeDetails(event)
 
     // Store the values in local storage
     localStorage.setItem("username", username);
-    localStorage.setItem("useremail", useremail);
+    localStorage.setItem("useremail", email);
 
     // Redirect to the page to display the user's details
-    window.location.href = 'js-localStorage-.html';
+    window.location.href = 'js-localStorage.html';
 }
 
 function deleteDetails()
@@ -23,9 +26,9 @@ function deleteDetails()
     localStorage.removeItem("useremail");
 }
 
-function printlocalStorage()
+function printLocalStorage()
 {
-    let localStorageDetails = "";
+    // let localStorageDetails = "";
     let contentDiv = document.getElementById("contentDiv");
 
     // check whether the browser supports local storage
@@ -43,9 +46,21 @@ function printlocalStorage()
         {
             localStorageDetails += `<p>The username and email address have been cleared or not set.<br/>Please enter them in the <a href="js-localStorage-form.html">User Details Form</a></p>`;
         }
+
+        contentDiv.innerHTML = localStorageDetails;
     }
     else //when the browser doesn't support local storage
     {
         alert('sorry, your browser doesn\t support localstorage. \nPlease try a newer version or switch to a different browser.');
     }
 }
+
+// automatically call printloscalStorage on display page
+document.addEventListener("DOMContentLoaded", 
+    function() 
+{
+    if (document.getElementById("contentDiv")) 
+    {
+        printLocalStorage();
+    }
+});
